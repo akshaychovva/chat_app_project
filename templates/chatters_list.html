@@ -1,0 +1,10 @@
+<ul>
+    {{request.user}}
+    {% for usrname in userlist %}
+    <li>
+        <a href="{% url 'index' usrname.id %}">
+        {{ usrname }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
